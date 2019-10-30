@@ -10,7 +10,7 @@
     
     
     
-    <title>Hello World | Citrus��С��</title>
+    <title>jsp实现页面跳转的几种方式 | Citrus��С��</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             <div class="cube-article">
-    <h1 class="title">Hello World</h1>
+    <h1 class="title">jsp实现页面跳转的几种方式</h1>
     
     <div class="cube-article-header">
         <div class="cube-article-date">
             <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
             <!-- moment.js对象 -->
-            2019-10-13
+            2019-10-30
         </div>
         <div class="cube-article-tags">
     <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -177,19 +177,16 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h6 id="一、使用href超链接标记（客户端跳转）"><a href="#一、使用href超链接标记（客户端跳转）" class="headerlink" title="一、使用href超链接标记（客户端跳转）"></a>一、使用href超链接标记（客户端跳转）</h6><h6 id="二、提交表单（客户端跳转）"><a href="#二、提交表单（客户端跳转）" class="headerlink" title="二、提交表单（客户端跳转）"></a>二、提交表单（客户端跳转）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h5 id="三、Javascrip事件（客户端跳转）"><a href="#三、Javascrip事件（客户端跳转）" class="headerlink" title="三、Javascrip事件（客户端跳转）"></a>三、Javascrip事件（客户端跳转）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;跳转2&quot; onclick=&quot;next()&quot;&gt;</span><br><span class="line"></span><br><span class="line">      　　&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">            　　function next()&#123;</span><br><span class="line"></span><br><span class="line">                　　window.location = &quot;page2.jsp&quot;;</span><br><span class="line"></span><br><span class="line">           　　 &#125;</span><br><span class="line"></span><br><span class="line">       　　&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h5 id="四、使用response对象-客户端跳转-重定向"><a href="#四、使用response对象-客户端跳转-重定向" class="headerlink" title="四、使用response对象  (客户端跳转)(重定向)"></a>四、使用response对象  (客户端跳转)(重定向)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　&lt;%  response.sendRedirect(&quot;page2.jsp&quot;); %&gt;　　　　　　　　　</span><br><span class="line">　　//sendRedirect()可以带参数传递,后面应该紧跟一句return</span><br><span class="line"></span><br><span class="line">　　&lt;%   response.setHeader(&quot;Refresh&quot;, &quot;1;url=page2.jsp&quot;); %&gt;　　</span><br><span class="line">　　//1秒后,刷新,并跳到,page2.jsp页面</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h5 id="五、使用forward动作标记-服务器端跳转-转发"><a href="#五、使用forward动作标记-服务器端跳转-转发" class="headerlink" title="五、使用forward动作标记　(服务器端跳转)(转发)"></a>五、使用forward动作标记　(服务器端跳转)(转发)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　jsp自带的forword标签来实现跳转　　　　</span><br><span class="line">　&lt;jsp:forward page=&quot;page2.jsp&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h5 id="六、-使用RequestDispatcher类-服务器端跳转-转发"><a href="#六、-使用RequestDispatcher类-服务器端跳转-转发" class="headerlink" title="六、 使用RequestDispatcher类     (服务器端跳转)(转发)　"></a>六、 使用RequestDispatcher类     (服务器端跳转)(转发)　</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　&lt;% request.getRequestDispatcher(&quot;page2.jsp&quot;).forward(request, response);%&gt;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 </div>
@@ -197,13 +194,13 @@
 <div class="cube-article-nav">
     <ul>
         
-        <li class="prev">
+        
+        <li class="next">
             <a href="/2019/10/13/我的第一篇博客/">
-                <i class="cube-icon cube-prev" aria-hidden="true"></i>
                 我的第一篇博客
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
             </a>
         </li>
-        
         
     </ul>
 </div>
