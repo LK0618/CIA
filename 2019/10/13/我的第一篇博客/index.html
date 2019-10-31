@@ -183,42 +183,51 @@
 </li>
 <li><p>2.类的创建</p>
 </li>
-<li><p>语法：public class 类名{}</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 语法：public class 类名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;class---&gt;类名</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>File—&gt;new—&gt;class—&gt;类名</p>
-</li>
+</ul>
+<ul>
 <li><p>3.创建对象</p>
 </li>
-<li><p>类名 对象名=new 类名();</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 类名 对象名=new 类名();</span><br><span class="line">- 对象名.方法名(); 对象名.属性</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>对象名.方法名(); 对象名.属性</p>
-</li>
+</ul>
+<ul>
 <li><p>4.构造方法：方法名和类名相同,没有返回值</p>
 </li>
-<li><p>public class 类名{</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;//主要的做用是初始化操作</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>public 类名(){}//主要的做用是初始化操作</p>
-</li>
-<li><p>}</p>
-</li>
+</ul>
+<ul>
 <li><p>5.构造方法重载</p>
 </li>
 <li><p>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</p>
 </li>
-<li><p>public class 类名{</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;</span><br><span class="line">- public 类名(String name,int age)&#123;&#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>public 类名(){}</p>
-</li>
-<li><p>public 类名(String name,int age){}</p>
-</li>
-<li><p>}</p>
-</li>
+</ul>
+<ul>
 <li><p>6.构造方法的执行</p>
 </li>
-<li><p>new 类名();—&gt;执行构造方法</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- new 类名();---&gt;执行构造方法</span><br><span class="line">- super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>super();—&gt;执行了父类的构造方法</p>
-</li>
+</ul>
+<ul>
 <li><p>7.static静态修饰符</p>
 </li>
 <li><p>静态修饰符可以修饰属性，方法，代码块</p>
@@ -244,14 +253,13 @@
 </li>
 <li><p>4.修饰符</p>
 </li>
-<li><p>public—&gt;公共的：在一个项目中都可以访问，权限最高</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public---&gt;公共的：在一个项目中都可以访问，权限最高</span><br><span class="line">- private---&gt;私有的：只能在本类中进行访问，权限最低</span><br><span class="line">- protected---&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</span><br><span class="line">- default---&gt;默认的：同一个包能访问</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
-<li><p>private—&gt;私有的：只能在本类中进行访问，权限最低</p>
-</li>
-<li><p>protected—&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</p>
-</li>
-<li><p>default—&gt;默认的：同一个包能访问</p>
-</li>
+</ul>
+<ul>
 <li><p>第四章 面向对象三大特征—继承</p>
 </li>
 <li><p>1.继承的概念：父亲儿子，电影《西虹市首富》</p>
@@ -260,7 +268,7 @@
 </li>
 <li><p>3.继承的语法：</p>
 </li>
-<li><p>public class 类名  extends 父类{}</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>4.使用，在之类中：</p>
 </li>
@@ -333,7 +341,7 @@
 </li>
 <li><p>1.当修饰变量时，变量转换成常量，常量的值不能改变</p>
 </li>
-<li><p>final int a=18;//a=18;不能改变,必须给一个初始值</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int a=18;//a=18;不能改变,必须给一个初始值</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>2.当修饰方法时，该方法不能被重写</p>
 </li>
@@ -349,9 +357,7 @@
 </li>
 <li><p>3.接口的语法</p>
 </li>
-<li><p>public interface 接口名{}</p>
-</li>
-<li><p>File—&gt;new—&gt;interface//创建接口</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public interface 接口名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;interface//创建接口</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>4.接口的用法</p>
 </li>
@@ -372,12 +378,22 @@
 <ul>
 <li><p>注意接口可以进行多继承</p>
 </li>
-<li><p>public interface 接口名 extends 接口名，接口名{}</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>一般用法</p>
 </li>
-<li><p>public class 类名 extends 父类 implements 接口，接口{}</p>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
+</ul>
+<ul>
 <li><p>第八章 集合框架</p>
 </li>
 <li><p>1.ArrayList</p>
