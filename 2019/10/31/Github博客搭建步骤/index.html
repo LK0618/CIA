@@ -10,7 +10,7 @@
     
     
     
-    <title>我的第一篇博客 | Citrus</title>
+    <title>Github博客搭建步骤 | Citrus</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             <div class="cube-article">
-    <h1 class="title">我的第一篇博客</h1>
+    <h1 class="title">Github博客搭建步骤</h1>
     
     <div class="cube-article-header">
         <div class="cube-article-date">
             <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
             <!-- moment.js对象 -->
-            2019-10-13
+            2019-10-31
         </div>
         <div class="cube-article-tags">
     <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -177,242 +177,69 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <h1 id="JAVA知识点总结"><a href="#JAVA知识点总结" class="headerlink" title="JAVA知识点总结"></a>JAVA知识点总结</h1><p>第二章 类和对象</p>
-<ul>
-<li><p>1.面向对象概念：</p>
-</li>
-<li><p>2.类的创建</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 语法：public class 类名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;class---&gt;类名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3.创建对象</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 类名 对象名=new 类名();</span><br><span class="line">- 对象名.方法名(); 对象名.属性</span><br></pre></td></tr></table></figure>
+        <h1 id="Github个人技术博客搭建步骤"><a href="#Github个人技术博客搭建步骤" class="headerlink" title="Github个人技术博客搭建步骤"></a>Github个人技术博客搭建步骤</h1><h3 id="一、前期准备"><a href="#一、前期准备" class="headerlink" title="一、前期准备"></a>一、前期准备</h3><p>1、GitHub账号</p>
+<p>注册地址：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a></p>
+<p>2、Node.js环境</p>
+<p>下载地址：<a href="https://nodejs.org/download/" target="_blank" rel="noopener">https://nodejs.org/download/</a></p>
+<p>3、Git 软件：下载地址<a href="http://git-scm.com/download/" target="_blank" rel="noopener">http://git-scm.com/download/</a></p>
+<a id="more"></a>
 
- <a id="more"></a>
-</li>
-<li><p>4.构造方法：方法名和类名相同,没有返回值</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;//主要的做用是初始化操作</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>5.构造方法重载</p>
-</li>
-<li><p>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;</span><br><span class="line">- public 类名(String name,int age)&#123;&#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>6.构造方法的执行</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- new 类名();---&gt;执行构造方法</span><br><span class="line">- super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>7.static静态修饰符</p>
-</li>
-<li><p>静态修饰符可以修饰属性，方法，代码块</p>
-</li>
-<li><p>类名.属性      类名.方法名</p>
-</li>
-<li><p>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</p>
-</li>
-<li></li>
-<li><p>第三章 面向对象三大特征—封装</p>
-</li>
-<li><p>1.封装的概念</p>
-</li>
-<li><p>2.封装的步骤</p>
-</li>
-<li><p>1.把属性私有化（private）</p>
-</li>
-<li><p>2.对这些属性设置get和set方法</p>
-</li>
-<li><p>3.调用处理这些方法</p>
-</li>
-<li><p>3.封装的作用：避免一些用一些不合乎常理的操作</p>
-</li>
-<li><p>4.修饰符</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public---&gt;公共的：在一个项目中都可以访问，权限最高</span><br><span class="line">- private---&gt;私有的：只能在本类中进行访问，权限最低</span><br><span class="line">- protected---&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</span><br><span class="line">- default---&gt;默认的：同一个包能访问</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>第四章 面向对象三大特征—继承</p>
-</li>
-<li><p>1.继承的概念：父亲儿子，电影《西虹市首富》</p>
-</li>
-<li><p>2.继承的关键字：extends</p>
-</li>
-<li><p>3.继承的语法：</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4.使用，在之类中：</p>
-</li>
-<li><p>可以直接调用父类的非私有属性和方法</p>
-</li>
-<li><p>可以用super.方法     super.属性</p>
-</li>
-<li><p>5.父类构造方法调用：super();</p>
-</li>
-<li><p>调用父类的构造方法必须在之类中调用</p>
-</li>
-<li><p>必须实在之类构造方法的第一行代码</p>
-</li>
-<li><p>6.重写@Override</p>
-</li>
-<li><p>必须继承</p>
-</li>
-<li><p>方法名一致，参数个数，顺序，类型全部一致<br> 第五章 面向对象（多态）</p>
-</li>
-<li><p>1.多态的概念</p>
-</li>
-<li><p>2.多态的必要条件</p>
-</li>
-<li><p>继承</p>
-</li>
-<li><p>重写</p>
-</li>
-<li><p>父类引用指向子类对象（向上转型）</p>
-</li>
-<li><p>3.多态的使用</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- public class Father&#123;</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;米饭&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Son extends Father&#123;</span><br><span class="line">- @Override</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;熬粥&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Father son=new Son();</span><br><span class="line">- son.cooking();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>4.向下转型</p>
-</li>
-<li><p>Son son=(Son)father;</p>
-</li>
-<li><p>第六章 抽象</p>
-</li>
-<li><p>1.抽象的概念</p>
-</li>
-<li><p>2.抽象的关键字</p>
-</li>
-<li><p>abstract</p>
-</li>
-<li><p>可以修饰类，可以修饰方法</p>
-</li>
-<li><p>3.抽象的用法</p>
-</li>
-<li><p>//抽象类</p>
-</li>
-<li><p>public abstract class 类名{</p>
-</li>
-<li><p>//抽象方法没有方法体</p>
-</li>
-<li><p>public abstract void 方法名();    </p>
-</li>
-<li><p>}</p>
-</li>
-<li><p>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</p>
-</li>
-<li><p>4.final修饰符：最终的</p>
-</li>
-<li><p>修饰变量，修饰方法，修饰类</p>
-</li>
-<li><p>1.当修饰变量时，变量转换成常量，常量的值不能改变</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int a=18;//a=18;不能改变,必须给一个初始值</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.当修饰方法时，该方法不能被重写</p>
-</li>
-<li><p>3.当修饰类时，该类不能被继承</p>
-</li>
-<li><p>第七章 接口</p>
-</li>
-<li><p>1.接口的概念</p>
-</li>
-<li><p>2.接口的关键字</p>
-</li>
-<li><p>interface</p>
-</li>
-<li><p>3.接口的语法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public interface 接口名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;interface//创建接口</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4.接口的用法</p>
-</li>
-<li><p>实现接口的关键字  implements</p>
-</li>
-<li><p>public interface 接口名{</p>
-</li>
-<li><p>//接口是纯抽象类</p>
-</li>
-<li><p>//接口里面的方法都是抽象方法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- void setData();</span><br><span class="line">- &#125;</span><br><span class="line">- public class Play implements 接口名&#123;</span><br><span class="line">- @Override</span><br><span class="line">- void setData()&#123;</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Play play=new Play();</span><br><span class="line">- play.setData();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>注意接口可以进行多继承</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>一般用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>第八章 集合框架</p>
-</li>
-<li><p>1.ArrayList</p>
-</li>
-<li><p>1.用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList list=new ArrayList();</span><br><span class="line">- list.add();//添加数据</span><br><span class="line">- list.get();//获取数据</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>2.Map</p>
-</li>
-<li><p>用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- Map map=new HasMap();</span><br><span class="line">- map.put(key,value);//key不能重复</span><br><span class="line">- map.get(key);//获取key对象的value</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>3.泛型</p>
-</li>
-<li><p>用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();</span><br><span class="line">- Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();</span><br><span class="line">- ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
+<h3 id="二、软件安装"><a href="#二、软件安装" class="headerlink" title="二、软件安装"></a>二、软件安装</h3><p>1、注册GitHub账号</p>
+<p>1)Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，此处账号名作为后期个人博客的地址使用2。并且需要勾选Initialize this repository with a README。（如果没有勾选，后期要创建README文件即可）</p>
+<p>2)创建一个新的repository(代码仓库), 注意，名称必须是xxx.github.io 格式，并且xxx必须是你在GitHub的用户名。</p>
+<p>3)在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，可以访问它。你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它。</p>
+<p>2.安装Node.js</p>
+<p>在node.js指定地址下载，采用最新的版本即可。</p>
+<ol>
+<li>安装Git.</li>
+</ol>
+<h3 id="三、Hexo配置流程"><a href="#三、Hexo配置流程" class="headerlink" title="三、Hexo配置流程"></a>三、Hexo配置流程</h3><p>1、<strong>安装Hexo</strong></p>
+<p>Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。</p>
+<p>1）新建文件夹hexo</p>
+<p>首先创建一个文件夹，用来存放Hexo模板和项目，然后进入 hexo 文件夹，鼠标右键点击Git Bash Here。</p>
+<p>2）安装hexo基础框架</p>
+<p>// 这是安装hexo的基础框架（此处要求已经安装了node.js环境）</p>
+<p>第一步：<code>npm install hexo-cli -g</code></p>
+<p>第二步：`hexo init blog <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">它就会在当前目录下生成一个blog的文件夹，并在里面生成相关配置信息。</span><br><span class="line"></span><br><span class="line">第三步：`cd blog`</span><br><span class="line"></span><br><span class="line">切换到blog目录下</span><br><span class="line"></span><br><span class="line">第四步：`npm install`</span><br><span class="line"></span><br><span class="line">安装必备的组件，安装完成之后，`blog`文件夹的目录结构大致如下：</span><br><span class="line"></span><br><span class="line">// 编译生成静态页面，会在当前目录下生成一个新的叫做public的文件夹。</span><br><span class="line"></span><br><span class="line">第五步：`hexo g`</span><br><span class="line"></span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">// 启动本地服务</span><br><span class="line"></span><br><span class="line">第六步：`hexo s`</span><br><span class="line"></span><br><span class="line">``</span><br><span class="line"></span><br><span class="line">打开链接[http://localhost:4000](http://localhost:4000/)，看到这样的网页就成功啦。</span><br></pre></td></tr></table></figure></p>
+<p>```</p>
+<p>2、 hexo主题设置，这里以主题yilia为例进行说明。</p>
+<p>1）安装主题（此处当前目录为blog）</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<p>2）启用主题</p>
+<p>cd themes/yilia</p>
+<p>git pull //获取远程内容</p>
+<p>3） 修改配置文件</p>
+<p>修改hexo目录下的_config.yml配置文件中的theme属性，将其设置为我们前面克隆下来的主体样式，此处theme: yilia</p>
+<p>4） 重启服务</p>
+<p>切换到blog目录</p>
+<p>hexo g # 重新生成静态文件</p>
+<p>hexo s # 启动本地web服务器</p>
+<p>现在打开<a href="http://localhost:4000，会看到我们已经应用了一个新的主题。/" target="_blank" rel="noopener">http://localhost:4000，会看到我们已经应用了一个新的主题。</a></p>
+<h3 id="四、部署到GitHub服务器"><a href="#四、部署到GitHub服务器" class="headerlink" title="四、部署到GitHub服务器"></a>四、部署到GitHub服务器</h3><p>1、使用git命令行部署（optional）</p>
+<p>此处我们采用git命令来完成部署的工作。</p>
+<p>1) cd d:/hexo/blog</p>
+<p>git clone <a href="https://github.com/fang235/fang235.github.io" target="_blank" rel="noopener">https://github.com/cuihuniubi/cuihuniubi.github.io</a> .deploy/cuihuniubi.github.io</p>
+<p>将我们之前创建的repo克隆到本地，新建一个目录叫做.deploy用于存放克隆的代码。</p>
+<p>2) hexo generate //生成静态文件</p>
+<p>cp -R public/* .deploy/cuihuniubi.github.io //复制文件</p>
+<p>cd .deploy/cuihuniubi.github.io //切换目录</p>
+<p>git add . //将需要提交的代码添加到暂存区</p>
+<p>git commit -m “update” //将暂存区内容提交给本地版本库</p>
+<p>git push //推送给远程服务器</p>
+<p>简单解释一下，hexo generate生成public文件夹下的新内容，然后将其拷贝至cuihuniubi.github.io的git目录下，然后使用git commit命令提交代码到cuihuniubi.github.io这个repo的master branch上。</p>
+<p>需要部署的时候，执行第三个步骤。执行过程中可能需要让你输入Github账户的用户名及密码，按照提示操作即可。</p>
+<p>2、 验证</p>
+<p>打开浏览器，输入地址：<a href="https://cuihuniubi.github.io/" target="_blank" rel="noopener">https://cuihuniubi.github.io/</a> ，就可以看到我们的博客上线了哈哈哈！！！</p>
+<h3 id="五、发布博客内容"><a href="#五、发布博客内容" class="headerlink" title="五、发布博客内容"></a>五、发布博客内容</h3><p>1、创建博客标题</p>
+<p>hexo new “CUIHUNIUBI”</p>
+<p>2、编写博客内容</p>
+<p>找到创建的md文件，使用编辑器打开，按照Markdown的格式，编写博客内容，编写完成之后，执行以下代码，将博客内容推送到远程服务器上。</p>
+<p>hexo generate //生成静态文件</p>
+<p>cp -R public/* .deploy/cuihuniubi.github.io //复制文件</p>
+<p>cd .deploy/cuihuniubi.github.io //切换目录</p>
+<p>git add . //将需要提交的代码添加到暂存区</p>
+<p>git commit -m “update” //将暂存区内容提交给本地版本库</p>
+<p>git push //推送给远程服务器</p>
 
     </div>
 </div>
@@ -421,12 +248,19 @@
     <ul>
         
         <li class="prev">
-            <a href="/2019/10/25/数据库的查询/">
+            <a href="/2019/10/31/jsp中request,response,session的方法/">
                 <i class="cube-icon cube-prev" aria-hidden="true"></i>
-                数据库的查询
+                jsp中request，response，session方法
             </a>
         </li>
         
+        
+        <li class="next">
+            <a href="/2019/10/25/数据库的查询/">
+                数据库的查询
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
         
     </ul>
 </div>

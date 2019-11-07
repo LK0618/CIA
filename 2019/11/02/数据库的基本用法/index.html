@@ -10,7 +10,7 @@
     
     
     
-    <title>我的第一篇博客 | Citrus</title>
+    <title>数据库的基本用法 | Citrus</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             <div class="cube-article">
-    <h1 class="title">我的第一篇博客</h1>
+    <h1 class="title">数据库的基本用法</h1>
     
     <div class="cube-article-header">
         <div class="cube-article-date">
             <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
             <!-- moment.js对象 -->
-            2019-10-13
+            2019-11-02
         </div>
         <div class="cube-article-tags">
     <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -177,242 +177,51 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <h1 id="JAVA知识点总结"><a href="#JAVA知识点总结" class="headerlink" title="JAVA知识点总结"></a>JAVA知识点总结</h1><p>第二章 类和对象</p>
-<ul>
-<li><p>1.面向对象概念：</p>
-</li>
-<li><p>2.类的创建</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 语法：public class 类名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;class---&gt;类名</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3.创建对象</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 类名 对象名=new 类名();</span><br><span class="line">- 对象名.方法名(); 对象名.属性</span><br></pre></td></tr></table></figure>
+        <h5 id="1-如何在命令行配置mysql数据库"><a href="#1-如何在命令行配置mysql数据库" class="headerlink" title="1.如何在命令行配置mysql数据库"></a>1.如何在命令行配置mysql数据库</h5><p>找到mysql安装目录的bin文件放置到 path 环境变量中</p>
+<h5 id="2-启动-停止-mysql"><a href="#2-启动-停止-mysql" class="headerlink" title="2.启动/停止 mysql"></a>2.启动/停止 mysql</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动 netstartmysqla</span><br><span class="line">停止 mysql net stop mysqla</span><br></pre></td></tr></table></figure>
 
- <a id="more"></a>
-</li>
-<li><p>4.构造方法：方法名和类名相同,没有返回值</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;//主要的做用是初始化操作</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>5.构造方法重载</p>
-</li>
-<li><p>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;</span><br><span class="line">- public 类名(String name,int age)&#123;&#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-登录-退出-mysql"><a href="#3-登录-退出-mysql" class="headerlink" title="3.登录/退出 mysql"></a>3.登录/退出 mysql</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -hlocalhost -P3306 -uroot -p</span><br><span class="line">输入密码 123456</span><br><span class="line">退出 mysql exit quit \q</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 
+<h5 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">binary、int、float、double、</span><br><span class="line">char、varchar、text、datetime</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>6.构造方法的执行</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- new 类名();---&gt;执行构造方法</span><br><span class="line">- super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
+<h5 id="5-添加数据库"><a href="#5-添加数据库" class="headerlink" title="5.添加数据库"></a>5.添加数据库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create databasefirst_db charset utf-8;</span><br></pre></td></tr></table></figure>
 
+<h5 id="6-查看数据库"><a href="#6-查看数据库" class="headerlink" title="6.查看数据库"></a>6.查看数据库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">showdatabases；</span><br><span class="line">show create database;</span><br></pre></td></tr></table></figure>
 
+<h5 id="7-删除数据"><a href="#7-删除数据" class="headerlink" title="7.删除数据"></a>7.删除数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dropdatabase db1;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>7.static静态修饰符</p>
-</li>
-<li><p>静态修饰符可以修饰属性，方法，代码块</p>
-</li>
-<li><p>类名.属性      类名.方法名</p>
-</li>
-<li><p>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</p>
-</li>
-<li></li>
-<li><p>第三章 面向对象三大特征—封装</p>
-</li>
-<li><p>1.封装的概念</p>
-</li>
-<li><p>2.封装的步骤</p>
-</li>
-<li><p>1.把属性私有化（private）</p>
-</li>
-<li><p>2.对这些属性设置get和set方法</p>
-</li>
-<li><p>3.调用处理这些方法</p>
-</li>
-<li><p>3.封装的作用：避免一些用一些不合乎常理的操作</p>
-</li>
-<li><p>4.修饰符</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public---&gt;公共的：在一个项目中都可以访问，权限最高</span><br><span class="line">- private---&gt;私有的：只能在本类中进行访问，权限最低</span><br><span class="line">- protected---&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</span><br><span class="line">- default---&gt;默认的：同一个包能访问</span><br></pre></td></tr></table></figure>
+<h5 id="8-使用数据表前需要先打开数据表所在的数据库"><a href="#8-使用数据表前需要先打开数据表所在的数据库" class="headerlink" title="8.使用数据表前需要先打开数据表所在的数据库"></a>8.使用数据表前需要先打开数据表所在的数据库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use db2</span><br></pre></td></tr></table></figure>
 
+<h5 id="9-创建表"><a href="#9-创建表" class="headerlink" title="9.创建表"></a>9.创建表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create table student(</span><br><span class="line">Id int,</span><br><span class="line">stuidchar(10),</span><br><span class="line">stunamevarchar(10));</span><br></pre></td></tr></table></figure>
 
+<h5 id="10-查询当前数据库下有哪些表"><a href="#10-查询当前数据库下有哪些表" class="headerlink" title="10.查询当前数据库下有哪些表"></a>10.查询当前数据库下有哪些表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">showtables</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>第四章 面向对象三大特征—继承</p>
-</li>
-<li><p>1.继承的概念：父亲儿子，电影《西虹市首富》</p>
-</li>
-<li><p>2.继承的关键字：extends</p>
-</li>
-<li><p>3.继承的语法：</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4.使用，在之类中：</p>
-</li>
-<li><p>可以直接调用父类的非私有属性和方法</p>
-</li>
-<li><p>可以用super.方法     super.属性</p>
-</li>
-<li><p>5.父类构造方法调用：super();</p>
-</li>
-<li><p>调用父类的构造方法必须在之类中调用</p>
-</li>
-<li><p>必须实在之类构造方法的第一行代码</p>
-</li>
-<li><p>6.重写@Override</p>
-</li>
-<li><p>必须继承</p>
-</li>
-<li><p>方法名一致，参数个数，顺序，类型全部一致<br> 第五章 面向对象（多态）</p>
-</li>
-<li><p>1.多态的概念</p>
-</li>
-<li><p>2.多态的必要条件</p>
-</li>
-<li><p>继承</p>
-</li>
-<li><p>重写</p>
-</li>
-<li><p>父类引用指向子类对象（向上转型）</p>
-</li>
-<li><p>3.多态的使用</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- public class Father&#123;</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;米饭&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Son extends Father&#123;</span><br><span class="line">- @Override</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;熬粥&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Father son=new Son();</span><br><span class="line">- son.cooking();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="11-查询表结构"><a href="#11-查询表结构" class="headerlink" title="11.查询表结构"></a>11.查询表结构</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sescstudent</span><br></pre></td></tr></table></figure>
 
+<h5 id="12-数据库备份与还原"><a href="#12-数据库备份与还原" class="headerlink" title="12.数据库备份与还原"></a>12.数据库备份与还原</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -uroot -p first_db&gt;c:\123456.sql</span><br><span class="line">还原 source c:\123456.sql</span><br></pre></td></tr></table></figure>
 
+<h5 id="13-数据完整性"><a href="#13-数据完整性" class="headerlink" title="13.数据完整性"></a>13.数据完整性</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主键约束 primary key 特点是非空且唯一</span><br><span class="line">两种写法，直接写在字段后，或者写在创建语句最后 primary key（字段名）</span><br><span class="line">联合主键 写在创建语句最后 primary key(字段 1，字段 2)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>4.向下转型</p>
-</li>
-<li><p>Son son=(Son)father;</p>
-</li>
-<li><p>第六章 抽象</p>
-</li>
-<li><p>1.抽象的概念</p>
-</li>
-<li><p>2.抽象的关键字</p>
-</li>
-<li><p>abstract</p>
-</li>
-<li><p>可以修饰类，可以修饰方法</p>
-</li>
-<li><p>3.抽象的用法</p>
-</li>
-<li><p>//抽象类</p>
-</li>
-<li><p>public abstract class 类名{</p>
-</li>
-<li><p>//抽象方法没有方法体</p>
-</li>
-<li><p>public abstract void 方法名();    </p>
-</li>
-<li><p>}</p>
-</li>
-<li><p>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</p>
-</li>
-<li><p>4.final修饰符：最终的</p>
-</li>
-<li><p>修饰变量，修饰方法，修饰类</p>
-</li>
-<li><p>1.当修饰变量时，变量转换成常量，常量的值不能改变</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int a=18;//a=18;不能改变,必须给一个初始值</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.当修饰方法时，该方法不能被重写</p>
-</li>
-<li><p>3.当修饰类时，该类不能被继承</p>
-</li>
-<li><p>第七章 接口</p>
-</li>
-<li><p>1.接口的概念</p>
-</li>
-<li><p>2.接口的关键字</p>
-</li>
-<li><p>interface</p>
-</li>
-<li><p>3.接口的语法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public interface 接口名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;interface//创建接口</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4.接口的用法</p>
-</li>
-<li><p>实现接口的关键字  implements</p>
-</li>
-<li><p>public interface 接口名{</p>
-</li>
-<li><p>//接口是纯抽象类</p>
-</li>
-<li><p>//接口里面的方法都是抽象方法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- void setData();</span><br><span class="line">- &#125;</span><br><span class="line">- public class Play implements 接口名&#123;</span><br><span class="line">- @Override</span><br><span class="line">- void setData()&#123;</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Play play=new Play();</span><br><span class="line">- play.setData();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="14-设置字段自增长"><a href="#14-设置字段自增长" class="headerlink" title="14.设置字段自增长"></a>14.设置字段自增长</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto_increment</span><br></pre></td></tr></table></figure>
 
+<p>数据表只有一个自增长列，为主键列</p>
+<h5 id="15-外键约束"><a href="#15-外键约束" class="headerlink" title="15.外键约束"></a>15.外键约束</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foreign key</span><br></pre></td></tr></table></figure>
 
+<p>写在创建语句最后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foreign key (从表字段名) references 主表名（主表字段名）</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>注意接口可以进行多继承</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="16-其余约束"><a href="#16-其余约束" class="headerlink" title="16.其余约束"></a>16.其余约束</h5><p>非空约束 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">not null</span><br></pre></td></tr></table></figure>
 
+<p>默认约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default 值，注意字符串，需外加单引号</span><br></pre></td></tr></table></figure>
 
+<p>唯一约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unique</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<ul>
-<li><p>一般用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>第八章 集合框架</p>
-</li>
-<li><p>1.ArrayList</p>
-</li>
-<li><p>1.用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList list=new ArrayList();</span><br><span class="line">- list.add();//添加数据</span><br><span class="line">- list.get();//获取数据</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>2.Map</p>
-</li>
-<li><p>用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- Map map=new HasMap();</span><br><span class="line">- map.put(key,value);//key不能重复</span><br><span class="line">- map.get(key);//获取key对象的value</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>3.泛型</p>
-</li>
-<li><p>用法</p>
-</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();</span><br><span class="line">- Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();</span><br><span class="line">- ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
+<p>主键约束和唯一约束的区别，主键无意义，唯一约束可以为 null</p>
 
     </div>
 </div>
@@ -421,12 +230,19 @@
     <ul>
         
         <li class="prev">
-            <a href="/2019/10/25/数据库的查询/">
+            <a href="/2019/11/03/jsp实现页面跳转的几种方式/">
                 <i class="cube-icon cube-prev" aria-hidden="true"></i>
-                数据库的查询
+                jsp实现页面跳转的几种方式
             </a>
         </li>
         
+        
+        <li class="next">
+            <a href="/2019/10/31/jsp中request,response,session的方法/">
+                jsp中request，response，session方法
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
         
     </ul>
 </div>

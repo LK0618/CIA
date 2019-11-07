@@ -10,7 +10,7 @@
     
     
     
-    <title>jsp中request，response，session方法 | Citrus</title>
+    <title>jsp实现页面跳转的几种方式 | Citrus</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             <div class="cube-article">
-    <h1 class="title">jsp中request，response，session方法</h1>
+    <h1 class="title">jsp实现页面跳转的几种方式</h1>
     
     <div class="cube-article-header">
         <div class="cube-article-date">
             <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
             <!-- moment.js对象 -->
-            2019-10-31
+            2019-11-03
         </div>
         <div class="cube-article-tags">
     <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -177,106 +177,23 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <h4 id="一、request对象"><a href="#一、request对象" class="headerlink" title="一、request对象"></a>一、request对象</h4><h5 id="客户端的请求信息被封装在request对象中，通过它才能了解到客户的需求，然后做出响应。它是HttpServletRequest类的实例。"><a href="#客户端的请求信息被封装在request对象中，通过它才能了解到客户的需求，然后做出响应。它是HttpServletRequest类的实例。" class="headerlink" title="客户端的请求信息被封装在request对象中，通过它才能了解到客户的需求，然后做出响应。它是HttpServletRequest类的实例。"></a>客户端的请求信息被封装在request对象中，通过它才能了解到客户的需求，然后做出响应。它是HttpServletRequest类的实例。</h5><p>1.返回指定属性的属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object getAttribute(String name)</span><br></pre></td></tr></table></figure>
-
-<p>2.返回所有可用属性名的枚举</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enumeration getAttributeNames()</span><br></pre></td></tr></table></figure>
-
-<p>3.返回字符编码方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getCharacterEncoding()</span><br></pre></td></tr></table></figure>
+        <h6 id="一、使用href超链接标记（客户端跳转）"><a href="#一、使用href超链接标记（客户端跳转）" class="headerlink" title="一、使用href超链接标记（客户端跳转）"></a>一、使用href超链接标记（客户端跳转）</h6><h6 id="二、提交表单（客户端跳转）"><a href="#二、提交表单（客户端跳转）" class="headerlink" title="二、提交表单（客户端跳转）"></a>二、提交表单（客户端跳转）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<p>4.返回请求体的长度（以字节数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int getContentLength()</span><br></pre></td></tr></table></figure>
+<h5 id="三、Javascrip事件（客户端跳转）"><a href="#三、Javascrip事件（客户端跳转）" class="headerlink" title="三、Javascrip事件（客户端跳转）"></a>三、Javascrip事件（客户端跳转）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;跳转2&quot; onclick=&quot;next()&quot;&gt;</span><br><span class="line"></span><br><span class="line">      　　&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">            　　function next()&#123;</span><br><span class="line"></span><br><span class="line">                　　window.location = &quot;page2.jsp&quot;;</span><br><span class="line"></span><br><span class="line">           　　 &#125;</span><br><span class="line"></span><br><span class="line">       　　&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p>5.得到请求体的MIME类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getContentType()</span><br></pre></td></tr></table></figure>
+<h5 id="四、使用response对象-客户端跳转-重定向"><a href="#四、使用response对象-客户端跳转-重定向" class="headerlink" title="四、使用response对象  (客户端跳转)(重定向)"></a>四、使用response对象  (客户端跳转)(重定向)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　&lt;%  response.sendRedirect(&quot;page2.jsp&quot;); %&gt;　　　　　　　　　</span><br><span class="line">　　//sendRedirect()可以带参数传递,后面应该紧跟一句return</span><br><span class="line"></span><br><span class="line">　　&lt;%   response.setHeader(&quot;Refresh&quot;, &quot;1;url=page2.jsp&quot;); %&gt;　　</span><br><span class="line">　　//1秒后,刷新,并跳到,page2.jsp页面</span><br></pre></td></tr></table></figure>
 
-<p>6.得到请求体中一行的二进制流</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServletInputStream getInputStream()</span><br></pre></td></tr></table></figure>
+<h5 id="五、使用forward动作标记-服务器端跳转-转发"><a href="#五、使用forward动作标记-服务器端跳转-转发" class="headerlink" title="五、使用forward动作标记　(服务器端跳转)(转发)"></a>五、使用forward动作标记　(服务器端跳转)(转发)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　jsp自带的forword标签来实现跳转　　　　</span><br><span class="line">　&lt;jsp:forward page=&quot;page2.jsp&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
-<p>7.返回name指定参数的参数值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getParameter(String name)</span><br></pre></td></tr></table></figure>
+<h5 id="六、-使用RequestDispatcher类-服务器端跳转-转发"><a href="#六、-使用RequestDispatcher类-服务器端跳转-转发" class="headerlink" title="六、 使用RequestDispatcher类     (服务器端跳转)(转发)　"></a>六、 使用RequestDispatcher类     (服务器端跳转)(转发)　</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　&lt;% request.getRequestDispatcher(&quot;page2.jsp&quot;).forward(request, response);%&gt;</span><br></pre></td></tr></table></figure>
 
-<p>8.返回可用参数名的枚举</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enumeration getParameterNames()</span><br></pre></td></tr></table></figure>
+<h3 id="response重定向和forward跳转和RequestDispatcher的区别"><a href="#response重定向和forward跳转和RequestDispatcher的区别" class="headerlink" title="response重定向和forward跳转和RequestDispatcher的区别"></a>response重定向和forward跳转和RequestDispatcher的区别</h3><h6 id="（1）response重定向"><a href="#（1）response重定向" class="headerlink" title="（1）response重定向"></a>（1）response重定向</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">执行完页面的所有代码，再跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL会改变。</span><br><span class="line">在浏览器端重定向。</span><br><span class="line">可以跳转到其它服务器上的页面，response.sendRedirect(“http://www.baidu.com”)</span><br></pre></td></tr></table></figure>
 
-<p>9.返回包含参数name的所有值的数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] getParameterValues(String name)</span><br></pre></td></tr></table></figure>
+<h6 id="（2）forward跳转"><a href="#（2）forward跳转" class="headerlink" title="（2）forward跳转"></a>（2）forward跳转</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">forward动作标记之后的代码，不再执行，直接跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL不会改变。</span><br><span class="line">在服务器端重定向。</span><br><span class="line">无法跳转到其它服务器上的页面。</span><br><span class="line">指定目标页面时，既可以使用绝对路径，也可以使用相对路径。</span><br></pre></td></tr></table></figure>
 
-<p>10.返回请求用的协议类型及版本号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getProtocol()</span><br></pre></td></tr></table></figure>
-
-<p>11.返回请求用的计划名,如:http.https及ftp等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getScheme()</span><br></pre></td></tr></table></figure>
-
-<p>12.返回接受请求的服务器主机名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getServerName()</span><br></pre></td></tr></table></figure>
-
-<p>13.返回服务器接受此请求所用的端口号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int getServerPort()</span><br></pre></td></tr></table></figure>
-
-<p>14.返回解码过了的请求体</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader getReader()</span><br></pre></td></tr></table></figure>
-
-<p>15.返回发送此请求的客户端IP地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getRemoteAddr()</span><br></pre></td></tr></table></figure>
-
-<p>16.返回发送此请求的客户端主机名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getRemoteHost()</span><br></pre></td></tr></table></figure>
-
-<p>17.设置属性的属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void setAttribute(String key,Object obj)</span><br></pre></td></tr></table></figure>
-
-<p>18.返回一虚拟路径的真实路径 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getRealPath(String path)</span><br></pre></td></tr></table></figure>
-
-<h4 id="二、response对象"><a href="#二、response对象" class="headerlink" title="二、response对象"></a>二、response对象</h4><h5 id="response对象包含了响应客户请求的有关信息，但在JSP中很少直接用到它，它是HttpServletResponse类的实例。"><a href="#response对象包含了响应客户请求的有关信息，但在JSP中很少直接用到它，它是HttpServletResponse类的实例。" class="headerlink" title="response对象包含了响应客户请求的有关信息，但在JSP中很少直接用到它，它是HttpServletResponse类的实例。"></a>response对象包含了响应客户请求的有关信息，但在JSP中很少直接用到它，它是HttpServletResponse类的实例。</h5><p>1.返回响应用的是何种字符编码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String getCharacterEncoding()</span><br></pre></td></tr></table></figure>
-
-<p>2.返回响应的一个二进制输出流</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServletOutputStream getOutputStream()</span><br></pre></td></tr></table></figure>
-
-<p>3.返回可以向客户端输出字符的一个对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PrintWriter getWriter()</span><br></pre></td></tr></table></figure>
-
-<p>4.设置响应头长度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void setContentLength(int len)</span><br></pre></td></tr></table></figure>
-
-<p>5.设置响应的MIME类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void setContentType(String type)</span><br></pre></td></tr></table></figure>
-
-<p>6.重新定向客户端的请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sendRedirect(java.lang.String location)</span><br></pre></td></tr></table></figure>
-
-<h4 id="三、session对象"><a href="#三、session对象" class="headerlink" title="三、session对象"></a>三、session对象</h4><h5 id="session对象指的是客户端与服务器的一次会话，从客户连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例"><a href="#session对象指的是客户端与服务器的一次会话，从客户连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例" class="headerlink" title="session对象指的是客户端与服务器的一次会话，从客户连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例."></a>session对象指的是客户端与服务器的一次会话，从客户连到服务器的一个WebApplication开始，直到客户端与服务器断开连接为止。它是HttpSession类的实例.</h5><p>1.返回SESSION创建时间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">long getCreationTime()</span><br></pre></td></tr></table></figure>
-
-<p>2.返回SESSION创建时JSP引擎为它设的惟一ID号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public String getId()</span><br></pre></td></tr></table></figure>
-
-<p>3.返回此SESSION里客户端最近一次请求时间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">long getLastAccessedTime()</span><br></pre></td></tr></table></figure>
-
-<p>4.返回两次请求间隔多长时间此SESSION被取消(ms)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int getMaxInactiveInterval()</span><br></pre></td></tr></table></figure>
-
-<p>5.返回一个包含此SESSION中所有可用属性的数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] getValueNames()</span><br></pre></td></tr></table></figure>
-
-<p>6.取消SESSION，使SESSION不可用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void invalidate()</span><br></pre></td></tr></table></figure>
-
-<p>7.返回服务器创建的一个SESSION,客户端是否已经加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boolean isNew()</span><br></pre></td></tr></table></figure>
-
-<p>8.删除SESSION中指定的属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void removeValue(String name)</span><br></pre></td></tr></table></figure>
-
-<p>9.设置两次请求间隔多长时间此SESSION被取消(ms)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void setMaxInactiveInterval()</span><br></pre></td></tr></table></figure>
+<h6 id="（3）RequestDispatcher跳转"><a href="#（3）RequestDispatcher跳转" class="headerlink" title="（3）RequestDispatcher跳转"></a>（3）RequestDispatcher跳转</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">执行完所有代码，包括RequestDispatcher之后的所有代码，再跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL不会改变。</span><br><span class="line">在服务器端重定向。</span><br><span class="line">无法跳转到其它服务器上的页面。</span><br><span class="line">指定目标页面时，只能使用绝对路径。</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -285,17 +202,10 @@
 <div class="cube-article-nav">
     <ul>
         
-        <li class="prev">
-            <a href="/2019/11/02/数据库的基本用法/">
-                <i class="cube-icon cube-prev" aria-hidden="true"></i>
-                数据库的基本用法
-            </a>
-        </li>
-        
         
         <li class="next">
-            <a href="/2019/10/31/Github博客搭建步骤/">
-                Github博客搭建步骤
+            <a href="/2019/11/02/数据库的基本用法/">
+                数据库的基本用法
                 <i class="cube-icon cube-next" aria-hidden="true"></i>
             </a>
         </li>
