@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Citrus">
+    
+    
+    
+    
+    
+    
+    <title>我的第一篇博客 | Citrus</title>
+    <!-- inject:style -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- endinject -->
+    <style>
+        .cube-loading {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('/images/lg/loading.gif') no-repeat center center;
+            background-color: rgba(0,0,0,.7);
+        }
+
+        .cube-loading.out {
+            display: none;
+        }
+
+        .cube-loading:before {
+            display: block;
+            content: 'Loading';
+            position: relative;
+            width: 100%;
+            top: 50%;
+            right: -50%;
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            .cube-loading:before {
+                font-size: 1.2em;
+                transform: translate(-24px,20px);
+                -webkit-transform: translate(-24px,20px);
+                -o-transform: translate(-24px,20px);
+                -ms-transform: translate(-24px,20px);
+            }
+        }
+
+        @media(min-width: 768px) {
+            .cube-loading:before {
+
+            }
+        }
+    </style>
+    
+</head></html>
+<body>
+<div class="cube-body">
+    <nav id="cube-top-memu" class="cube-menu">
+    <ul class="cube-menu-collapse">
+        
+        <li>
+            <i class="cube-icon cube-icon-home" aria-hidden="true"></i>
+            <a href="/">首页</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-archive" aria-hidden="true"></i>
+            <a href="/archives">归档</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
+            <a href="/categories">分类</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-tags" aria-hidden="true"></i>
+            <a href="/tags">标签</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-about" aria-hidden="true"></i>
+            <a href="/about-me">关于我</a>
+        </li>
+        
+    </ul>
+</nav>
+<nav class="cube-side-menu" id="cube-side-menu">
+    <ul class="cube-menu-list">
+        
+        <li>
+            <a class="lrc-control">Open Lyrics</a>
+        </li>
+        
+        <li>
+            <a class="scroll-to-top">Top</a>
+        </li>
+    </ul>
+</nav>
+    <header class="cube-header" id="cube-header">
+    <img src=" http://cube-1252774894.cosgz.myqcloud.com/background.png " alt="头部背景图片">
+    
+    <div class="cube-type">
+        <span class="cube-typed-title">Citrusの博客</span>
+        <span class="cube-typed-cursor">|</span>
+    </div>
+    
+</header>
+
+    <style>
+        nav.cube-menu:before {
+            content: '';
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        
+            z-index: -1;
+            background-image: url('/images/bizhi.jpg');
+            background-repeat: no-repeat;
+            background-position: center -356px;
+            background-size: cover;
+            background-color: transparent;
+        }
+
+        header.cube-background.cube-header-background {
+            visibility: hidden;
+            background-image: url('/images/bizhi.jpg');
+            background-position: center -400px;
+        }
+    </style>
+    <header class="cube-background cube-header-background">
+        
+        <div class="cube-type">
+            <span class="cube-typed-title">Citrusの博客</span>
+            <span class="cube-typed-cursor">|</span>
+        </div>
+        
+    </header>
+    <div class="load-header-background"></div>
+    <script>
+        (function (window) {
+
+            window.headerModule = {}
+            window.headerModule.image = {
+                width: '1920',
+                height: '1080'
+            }
+
+        })(window)
+    </script>
+    
+    <div class="cube-content">
+        <div class="cube-left">
+            <div class="cube-article">
+    <h1 class="title">我的第一篇博客</h1>
+    
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2019-10-13
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+    
+</div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <h1 id="JAVA知识点总结"><a href="#JAVA知识点总结" class="headerlink" title="JAVA知识点总结"></a>JAVA知识点总结</h1><p>第二章 类和对象</p>
+<ul>
+<li><p>1.面向对象概念：</p>
+</li>
+<li><p>2.类的创建</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 语法：public class 类名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;class---&gt;类名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.创建对象</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 类名 对象名=new 类名();</span><br><span class="line">- 对象名.方法名(); 对象名.属性</span><br></pre></td></tr></table></figure>
+
+ <a id="more"></a>
+</li>
+<li><p>4.构造方法：方法名和类名相同,没有返回值</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;//主要的做用是初始化操作</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5.构造方法重载</p>
+</li>
+<li><p>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public class 类名&#123;</span><br><span class="line">- public 类名()&#123;&#125;</span><br><span class="line">- public 类名(String name,int age)&#123;&#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>6.构造方法的执行</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- new 类名();---&gt;执行构造方法</span><br><span class="line">- super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>7.static静态修饰符</p>
+</li>
+<li><p>静态修饰符可以修饰属性，方法，代码块</p>
+</li>
+<li><p>类名.属性      类名.方法名</p>
+</li>
+<li><p>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</p>
+</li>
+<li></li>
+<li><p>第三章 面向对象三大特征—封装</p>
+</li>
+<li><p>1.封装的概念</p>
+</li>
+<li><p>2.封装的步骤</p>
+</li>
+<li><p>1.把属性私有化（private）</p>
+</li>
+<li><p>2.对这些属性设置get和set方法</p>
+</li>
+<li><p>3.调用处理这些方法</p>
+</li>
+<li><p>3.封装的作用：避免一些用一些不合乎常理的操作</p>
+</li>
+<li><p>4.修饰符</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- public---&gt;公共的：在一个项目中都可以访问，权限最高</span><br><span class="line">- private---&gt;私有的：只能在本类中进行访问，权限最低</span><br><span class="line">- protected---&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</span><br><span class="line">- default---&gt;默认的：同一个包能访问</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>第四章 面向对象三大特征—继承</p>
+</li>
+<li><p>1.继承的概念：父亲儿子，电影《西虹市首富》</p>
+</li>
+<li><p>2.继承的关键字：extends</p>
+</li>
+<li><p>3.继承的语法：</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4.使用，在之类中：</p>
+</li>
+<li><p>可以直接调用父类的非私有属性和方法</p>
+</li>
+<li><p>可以用super.方法     super.属性</p>
+</li>
+<li><p>5.父类构造方法调用：super();</p>
+</li>
+<li><p>调用父类的构造方法必须在之类中调用</p>
+</li>
+<li><p>必须实在之类构造方法的第一行代码</p>
+</li>
+<li><p>6.重写@Override</p>
+</li>
+<li><p>必须继承</p>
+</li>
+<li><p>方法名一致，参数个数，顺序，类型全部一致<br> 第五章 面向对象（多态）</p>
+</li>
+<li><p>1.多态的概念</p>
+</li>
+<li><p>2.多态的必要条件</p>
+</li>
+<li><p>继承</p>
+</li>
+<li><p>重写</p>
+</li>
+<li><p>父类引用指向子类对象（向上转型）</p>
+</li>
+<li><p>3.多态的使用</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- public class Father&#123;</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;米饭&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Son extends Father&#123;</span><br><span class="line">- @Override</span><br><span class="line">- public void cooking()&#123;</span><br><span class="line">- System.out.println(&quot;熬粥&quot;);</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Father son=new Son();</span><br><span class="line">- son.cooking();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>4.向下转型</p>
+</li>
+<li><p>Son son=(Son)father;</p>
+</li>
+<li><p>第六章 抽象</p>
+</li>
+<li><p>1.抽象的概念</p>
+</li>
+<li><p>2.抽象的关键字</p>
+</li>
+<li><p>abstract</p>
+</li>
+<li><p>可以修饰类，可以修饰方法</p>
+</li>
+<li><p>3.抽象的用法</p>
+</li>
+<li><p>//抽象类</p>
+</li>
+<li><p>public abstract class 类名{</p>
+</li>
+<li><p>//抽象方法没有方法体</p>
+</li>
+<li><p>public abstract void 方法名();    </p>
+</li>
+<li><p>}</p>
+</li>
+<li><p>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</p>
+</li>
+<li><p>4.final修饰符：最终的</p>
+</li>
+<li><p>修饰变量，修饰方法，修饰类</p>
+</li>
+<li><p>1.当修饰变量时，变量转换成常量，常量的值不能改变</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">final int a=18;//a=18;不能改变,必须给一个初始值</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.当修饰方法时，该方法不能被重写</p>
+</li>
+<li><p>3.当修饰类时，该类不能被继承</p>
+</li>
+<li><p>第七章 接口</p>
+</li>
+<li><p>1.接口的概念</p>
+</li>
+<li><p>2.接口的关键字</p>
+</li>
+<li><p>interface</p>
+</li>
+<li><p>3.接口的语法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- public interface 接口名&#123;&#125;</span><br><span class="line">- File---&gt;new---&gt;interface//创建接口</span><br><span class="line">-</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4.接口的用法</p>
+</li>
+<li><p>实现接口的关键字  implements</p>
+</li>
+<li><p>public interface 接口名{</p>
+</li>
+<li><p>//接口是纯抽象类</p>
+</li>
+<li><p>//接口里面的方法都是抽象方法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- void setData();</span><br><span class="line">- &#125;</span><br><span class="line">- public class Play implements 接口名&#123;</span><br><span class="line">- @Override</span><br><span class="line">- void setData()&#123;</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br><span class="line">- public class Test &#123;</span><br><span class="line">- public static void main(String[] args) &#123;</span><br><span class="line">- Play play=new Play();</span><br><span class="line">- play.setData();</span><br><span class="line">- &#125;</span><br><span class="line">- &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>注意接口可以进行多继承</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>一般用法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>第八章 集合框架</p>
+</li>
+<li><p>1.ArrayList</p>
+</li>
+<li><p>1.用法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList list=new ArrayList();</span><br><span class="line">- list.add();//添加数据</span><br><span class="line">- list.get();//获取数据</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>2.Map</p>
+</li>
+<li><p>用法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- Map map=new HasMap();</span><br><span class="line">- map.put(key,value);//key不能重复</span><br><span class="line">- map.get(key);//获取key对象的value</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>3.泛型</p>
+</li>
+<li><p>用法</p>
+</li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();</span><br><span class="line">- Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();</span><br><span class="line">- ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
+        
+        <li class="prev">
+            <a href="/2019/10/25/数据库的查询/">
+                <i class="cube-icon cube-prev" aria-hidden="true"></i>
+                数据库的查询
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+
+
+        </div>
+        <div class="cube-right">
+            
+
+<div class="cube-search cube-sidebar" id="cube-search">
+    <div class="search-container">
+        <input type="text" placeholder="Search" class="cube-search-input" id="cube-search-input">
+        <i class="cube-icon cube-icon-search cube-search-submit" aria-hidden="true"></i>
+    </div>
+    <!-- TODO 通过给window赋一个全局变量，通过脚本赋值 -->
+</div>
+<script>
+    (function (window) {
+        'use strict';
+        window.searchModule = {}
+        window.searchModule.JSONUrl = '/content.json'
+        window.searchModule.rootUrl = '/'
+    })(window)
+</script>
+<div class="cube-search-form">
+    <div class="cube-search-control">
+        <input type="text" placeholder="Search" class="search-input">
+        <a class="close-button">
+            <i class="cube-icon cube-close" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="cube-search-result"></div>
+</div>
+
+
+<div class="cube-author cube-sidebar" id="cube-author">
+    
+    
+    <span>Citrus</span>
+    
+    
+    <div class="count">
+        <a class="count articles"><span>6</span>Article</a>
+        <a class="count tags"><span>0</span>Tags</a>
+        <a class="count categories"><span>0</span>Categories</a>
+    </div>
+</div>
+
+
+
+<div class="cube-music cube-sidebar" id="cube-music">
+    <div class="cube-player aplayer" id="cube-player"></div>
+</div>
+<script>
+    (function (window) {
+        window.musicModule = {}
+        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":3,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"Dear friends","author":"TRIPLANE","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/TRIPLANE - Dear friends.mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/Dear friends - TRIPLANE.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/TRIPLANE - Dear friends.jpg"},{"title":"Butter-Fly","author":"和田光司","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/和田光司 - Butter-Fly (ピアノヴァージョン).mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/Butter-Fly (ピアノヴァージョン) - 和田光司.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/和田光司 - Butter-Fly (ピアノヴァージョン).jpg"},{"title":"宵闇花火","author":"葉月ゆら","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/葉月ゆら - 宵闇花火.mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/宵闇花火 - 葉月ゆら.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/葉月ゆら - 宵闇花火.jpg"}]}'
+        window.musicModule.lrcConfig = {
+            open: 'Open Lyrics',
+            close: 'Close Lyrics'
+        }
+    })(window)
+</script>
+
+
+
+<div class="cube-recent-posts cube-sidebar" id="cube-recent-posts">
+    <div class="title">
+        <a>Recent Posts</a>
+    </div>
+    <ul class="list">
+        
+        
+        <li>
+            <!-- TODO 如果文章要显示图片，那么在front-matter上添加preview属性(url or path) -->
+            
+            <div class="normal">
+                <p class="index first">
+                    <span>1</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/11/03/jsp实现页面跳转的几种方式/" title="jsp实现页面跳转的几种方式">jsp实现页面跳转的几种方式</a>
+                </p>
+            </div>
+            
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>2</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/11/02/数据库的基本用法/" title="数据库的基本用法">数据库的基本用法</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>3</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/31/jsp中request,response,session的方法/" title="jsp中request，response，session方法">jsp中request，response，session方法</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>4</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/31/Github博客搭建步骤/" title="Github博客搭建步骤">Github博客搭建步骤</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>5</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/25/数据库的查询/" title="数据库的查询">数据库的查询</a>
+                </p>
+            </div>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+<div class="cube-links cube-sidebar" id="cube-links">
+    <div class="title">
+        <a>Links</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/GitHub.png">
+            
+            <a href="https://github.com/ZEROKISEKI" target="_blank">GitHub</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/Coding.png">
+            
+            <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/SF.png">
+            
+            <a href="https://segmentfault.com/u/aonosora" target="_blank">SF社区</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/开发者头条.png">
+            
+            <a href="https://toutiao.io/u/148070" target="_blank">开发者头条</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+<div class="cube-friend-links cube-sidebar" id="cube-friend-links">
+    <div class="title">
+        <a>Friend Links</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/micblo.png">
+            <a href="https://blog.micblo.com/" target="_blank">罗大佬</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/DIYgod.jpg">
+            <a href="https://www.anotherhome.net/" target="_blank">DIYgod</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="/images/friend_links.jpg ">
+            <a href="https://aonosora.com/" target="_blank">咪西西の部落格</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<footer class="cube-footer">
+    
+© 2017 Citrus
+
+<br>
+Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+</footer>
+<!-- inject:script -->
+<script src="/js/script.js"></script>
+<!-- endinject -->
+<div class="cube-loading out"></div>
+</body>
+</html>
