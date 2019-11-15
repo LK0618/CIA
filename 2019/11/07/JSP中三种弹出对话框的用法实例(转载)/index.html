@@ -10,7 +10,7 @@
     
     
     
-    <title>jsp实现页面跳转的几种方式 | Citrus</title>
+    <title>jsp中三种弹出对话框的用法示例(转载) | Citrus</title>
     <!-- inject:style -->
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <!-- endinject -->
@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             <div class="cube-article">
-    <h1 class="title">jsp实现页面跳转的几种方式</h1>
+    <h1 class="title">jsp中三种弹出对话框的用法示例(转载)</h1>
     
     <div class="cube-article-header">
         <div class="cube-article-date">
             <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
             <!-- moment.js对象 -->
-            2019-11-03
+            2019-11-07
         </div>
         <div class="cube-article-tags">
     <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -177,24 +177,22 @@
     
     <div class="cube-article-content cube-markdown">
         
-        <h6 id="一、使用href超链接标记（客户端跳转）"><a href="#一、使用href超链接标记（客户端跳转）" class="headerlink" title="一、使用href超链接标记（客户端跳转）"></a>一、使用href超链接标记（客户端跳转）</h6><h6 id="二、提交表单（客户端跳转）"><a href="#二、提交表单（客户端跳转）" class="headerlink" title="二、提交表单（客户端跳转）"></a>二、提交表单（客户端跳转）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;　&lt;form name=&quot;form&quot; method=&quot;post&quot; action=&quot;page2.jsp&quot;&gt;</span><br><span class="line"></span><br><span class="line">           　　 &lt;input type=&quot;submit&quot; value=&quot;跳转1&quot;&gt;</span><br><span class="line"></span><br><span class="line">        　　&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+        <h6 id="jsp网页在与用户交互的过程中，有时需要弹出提示框，通知用户一些信息，如登录密码错误等在做JSP网页项目中，-实践并总结了三种有效的方式"><a href="#jsp网页在与用户交互的过程中，有时需要弹出提示框，通知用户一些信息，如登录密码错误等在做JSP网页项目中，-实践并总结了三种有效的方式" class="headerlink" title="jsp网页在与用户交互的过程中，有时需要弹出提示框，通知用户一些信息，如登录密码错误等在做JSP网页项目中， 实践并总结了三种有效的方式"></a>jsp网页在与用户交互的过程中，有时需要弹出提示框，通知用户一些信息，如登录密码错误等在做JSP网页项目中， 实践并总结了三种有效的方式</h6><h6 id="方式1：jsp前端"><a href="#方式1：jsp前端" class="headerlink" title="方式1：jsp前端"></a>方式1：jsp前端</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;</span><br><span class="line">alert(&quot;您还没有登录，请登录...&quot;);</span><br><span class="line">window.document.location.href=&quot;userlogin.html&quot;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h5 id="三、Javascrip事件（客户端跳转）"><a href="#三、Javascrip事件（客户端跳转）" class="headerlink" title="三、Javascrip事件（客户端跳转）"></a>三、Javascrip事件（客户端跳转）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;button&quot; value=&quot;跳转2&quot; onclick=&quot;next()&quot;&gt;</span><br><span class="line"></span><br><span class="line">      　　&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">            　　function next()&#123;</span><br><span class="line"></span><br><span class="line">                　　window.location = &quot;page2.jsp&quot;;</span><br><span class="line"></span><br><span class="line">           　　 &#125;</span><br><span class="line"></span><br><span class="line">       　　&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="方式2：java后台"><a href="#方式2：java后台" class="headerlink" title="方式2：java后台"></a>方式2：java后台</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public void popAlert() &#123;</span><br><span class="line"></span><br><span class="line">response.setCharacterEncoding(&quot;utf-8&quot;);</span><br><span class="line">PrintWriter out = response.getWriter();</span><br><span class="line">out.print(&quot;&lt;script&gt;alert(&apos;您还没有登录，请登录...&apos;); window.location=&apos;userlogin.html&apos; &lt;/script&gt;&quot;);</span><br><span class="line">out.flush();</span><br><span class="line">out.close();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="四、使用response对象-客户端跳转-重定向"><a href="#四、使用response对象-客户端跳转-重定向" class="headerlink" title="四、使用response对象  (客户端跳转)(重定向)"></a>四、使用response对象  (客户端跳转)(重定向)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">　　&lt;%  response.sendRedirect(&quot;page2.jsp&quot;); %&gt;　　　　　　　　　</span><br><span class="line">　　//sendRedirect()可以带参数传递,后面应该紧跟一句return</span><br><span class="line"></span><br><span class="line">　　&lt;%   response.setHeader(&quot;Refresh&quot;, &quot;1;url=page2.jsp&quot;); %&gt;　　</span><br><span class="line">　　//1秒后,刷新,并跳到,page2.jsp页面</span><br></pre></td></tr></table></figure>
+<h6 id="方式3：java后台-jsp前端"><a href="#方式3：java后台-jsp前端" class="headerlink" title="方式3：java后台 + jsp前端"></a>方式3：java后台 + jsp前端</h6><p>(1).java后台代码段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public void popAlert() &#123;</span><br><span class="line"></span><br><span class="line">request.setAttribute(&quot;loginError&quot;, &quot;您还没有登录，请登录...&quot;);          // 设置错误属性</span><br><span class="line">request.getRequestDispatcher(&quot;userlogin.html&quot;).forward(request, response);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="五、使用forward动作标记-服务器端跳转-转发"><a href="#五、使用forward动作标记-服务器端跳转-转发" class="headerlink" title="五、使用forward动作标记　(服务器端跳转)(转发)"></a>五、使用forward动作标记　(服务器端跳转)(转发)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　jsp自带的forword标签来实现跳转　　　　</span><br><span class="line">　&lt;jsp:forward page=&quot;page2.jsp&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>(2).jsp前端代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">String errorInfo = (String)request.getAttribute(&quot;loginError&quot;);         // 获取错误属性</span><br><span class="line">if(errorInfo != null) &#123;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;</span><br><span class="line">alert(&quot;&lt;%=errorInfo%&gt;&quot;);                                            // 弹出错误信息</span><br><span class="line"></span><br><span class="line">window.location=&apos;userlogin.html&apos; ;                            // 跳转到登录界面</span><br><span class="line">&lt;/script&gt; </span><br><span class="line">&lt;%</span><br><span class="line">&#125;</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
 
-<h5 id="六、-使用RequestDispatcher类-服务器端跳转-转发"><a href="#六、-使用RequestDispatcher类-服务器端跳转-转发" class="headerlink" title="六、 使用RequestDispatcher类     (服务器端跳转)(转发)　"></a>六、 使用RequestDispatcher类     (服务器端跳转)(转发)　</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　&lt;% request.getRequestDispatcher(&quot;page2.jsp&quot;).forward(request, response);%&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="response重定向和forward跳转和RequestDispatcher的区别"><a href="#response重定向和forward跳转和RequestDispatcher的区别" class="headerlink" title="response重定向和forward跳转和RequestDispatcher的区别"></a>response重定向和forward跳转和RequestDispatcher的区别</h3><h6 id="（1）response重定向"><a href="#（1）response重定向" class="headerlink" title="（1）response重定向"></a>（1）response重定向</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">执行完页面的所有代码，再跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL会改变。</span><br><span class="line">在浏览器端重定向。</span><br><span class="line">可以跳转到其它服务器上的页面，response.sendRedirect(“http://www.baidu.com”)</span><br></pre></td></tr></table></figure>
-
-<h6 id="（2）forward跳转"><a href="#（2）forward跳转" class="headerlink" title="（2）forward跳转"></a>（2）forward跳转</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">forward动作标记之后的代码，不再执行，直接跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL不会改变。</span><br><span class="line">在服务器端重定向。</span><br><span class="line">无法跳转到其它服务器上的页面。</span><br><span class="line">指定目标页面时，既可以使用绝对路径，也可以使用相对路径。</span><br></pre></td></tr></table></figure>
-
-<h6 id="（3）RequestDispatcher跳转"><a href="#（3）RequestDispatcher跳转" class="headerlink" title="（3）RequestDispatcher跳转"></a>（3）RequestDispatcher跳转</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">执行完所有代码，包括RequestDispatcher之后的所有代码，再跳转到目标页面。</span><br><span class="line">跳转到目标页面后，浏览器地址栏中的URL不会改变。</span><br><span class="line">在服务器端重定向。</span><br><span class="line">无法跳转到其它服务器上的页面。</span><br><span class="line">指定目标页面时，只能使用绝对路径。</span><br></pre></td></tr></table></figure>
-
+<h6 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h6><p>三种方式，实质都是通过JavaScript弹出对话框，提示用户密码错误，当用户点击alert确定按钮后自动跳转到登录界面</p>
+<h6 id="对话框有三种"><a href="#对话框有三种" class="headerlink" title="对话框有三种"></a>对话框有三种</h6><p>1.只是提醒，不能对脚本产生任何改变</p>
+<p>2.一般用于确认，返回 true 或者 false，所以可以轻松用于 if…else…判断</p>
+<p>3.一个带输入的对话框，可以返回用户填入的字符串，常见于某些留言本或者论坛输入内容那里的 插入UBB格式图片</p>
 
     </div>
 </div>
@@ -202,17 +200,10 @@
 <div class="cube-article-nav">
     <ul>
         
-        <li class="prev">
-            <a href="/2019/11/07/JSP中三种弹出对话框的用法实例(转载)/">
-                <i class="cube-icon cube-prev" aria-hidden="true"></i>
-                jsp中三种弹出对话框的用法示例(转载)
-            </a>
-        </li>
-        
         
         <li class="next">
-            <a href="/2019/11/02/数据库的基本用法/">
-                数据库的基本用法
+            <a href="/2019/11/03/jsp实现页面跳转的几种方式/">
+                jsp实现页面跳转的几种方式
                 <i class="cube-icon cube-next" aria-hidden="true"></i>
             </a>
         </li>
